@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Dancing Script", cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Metal Mania", cursive;
+  font-family: "Piedra", cursive;
+  color: rgb(53, 87, 75);
+  position: relative;
+}
+path,
+i,
+svg {
+  pointer-events: none;
+}
+.colors {
+  display: flex;
+  flex: 1;
+  min-height: 80vh;
+}
+.color {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+}
+.color h2 {
+  cursor: pointer;
+}
+.con {
+  display: flex;
+  flex-direction: column;
+}
+.adj,
+.lock {
+  font-size: 1.6rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: rgb(110, 110, 68);
+}
+.sliders {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  padding: 0.7rem;
+  background: rgb(191, 201, 176);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.sliders.active {
+  opacity: 1;
+  transform: translateY(0px);
+  pointer-events: all;
+}
+input[type="range"] {
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+.cl-adj,
+.cl-lib,
+.cl-save {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-top-right-radius: 0.5rem;
+  font-size: 1rem;
+}
+.pan {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pan button {
+  font-size: 1.7rem;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  color: rgb(67, 136, 113);
+  background: rgb(243, 227, 227);
+  cursor: pointer;
+  margin: 1rem;
+}
+.lib-pan,
+.gen-pan,
+.save-pan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pan p {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: rgb(117, 156, 57);
+}
+.copy-con,
+.save-con,
+.lib-con {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.copy-con.active,
+.save-con.active,
+.lib-con.active {
+  pointer-events: all;
+  opacity: 1;
+}
+.c-popup,
+.s-popup,
+.lib-popup {
+  background: rgb(184, 172, 141);
+  display: flex;
+  flex-direction: column;
+  min-width: 35%;
+  min-height: 45vh;
+  border-radius: 1rem;
+  transform: translateY(-2rem);
+  transition: transform 0.3s ease;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.c-popup.active,
+.s-popup.active,
+.lib-popup.active {
+  transform: translateY(0rem);
+}
+.lib-popup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: gray;
+  min-height: 45vh;
+  min-width: 45%;
+  overflow-y: hidden;
+}
+.copy-con h4,
+.save-con h4,
+.lib-con h4 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: greenyellow;
+}
+.name {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: rgb(46, 71, 46);
+  cursor: pointer;
+}
+.sub {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  color: rgb(105, 98, 78);
+  background: rgb(179, 221, 116);
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 1rem;
+}
+.big {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+  margin: 1rem;
+}
+.big h3 {
+  flex: 1;
+  margin: 1rem;
+  text-transform: capitalize;
+  color: rgb(30, 44, 53);
+}
+.small {
+  flex: 1;
+  display: flex;
+  margin: 1rem;
+}
+.small div {
+  height: 3rem;
+  flex: 1;
+}
+.pick {
+  height: 3rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 1rem;
+  background: greenyellow;
+  color: gray;
+  text-transform: capitalize;
+}
